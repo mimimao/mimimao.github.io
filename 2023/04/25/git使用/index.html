@@ -16,16 +16,16 @@
   <meta name="author" content="咪咪猫">
   <meta name="keywords" content="">
   
-    <meta name="description" content="git使用常用命令： 123456789101112131415161718git addgit commit git pull git pushgit statusgit checkout              切换分支git branch                 创建分支git remote add          链接远程仓库git merge">
+    <meta name="description" content="git使用常用命令： 1234567891011121314151617git addgit commit git pull git pushgit statusgit checkout              切换分支git branch                 创建分支git remote add          链接远程仓库git merge">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git使用">
 <meta property="og:url" content="https://mimimao.github.io/2023/04/25/git%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="咪咪猫MD">
-<meta property="og:description" content="git使用常用命令： 123456789101112131415161718git addgit commit git pull git pushgit statusgit checkout              切换分支git branch                 创建分支git remote add          链接远程仓库git merge">
+<meta property="og:description" content="git使用常用命令： 1234567891011121314151617git addgit commit git pull git pushgit statusgit checkout              切换分支git branch                 创建分支git remote add          链接远程仓库git merge">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gitee.com/mimimao12/pic/raw/master/20150602150510181">
 <meta property="article:published_time" content="2023-04-25T02:24:52.609Z">
-<meta property="article:modified_time" content="2023-04-25T02:43:44.131Z">
+<meta property="article:modified_time" content="2023-05-04T01:49:10.784Z">
 <meta property="article:author" content="咪咪猫">
 <meta property="article:tag" content="git">
 <meta name="twitter:card" content="summary_large_image">
@@ -277,11 +277,7 @@
               <div class="markdown-body">
                 
                 <h1 id="git使用"><a href="#git使用" class="headerlink" title="git使用"></a>git使用</h1><p>常用命令：</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs routeros">git <span class="hljs-built_in">add</span><br><br>git commit <br><br>git pull <br><br>git push<br><br>git status<br><br>git checkout              切换分支<br><br>git branch                 创建分支<br><br>git remote <span class="hljs-built_in">add</span>          链接远程仓库<br><br>git merge                   合并分支<br><br></code></pre></td></tr></table></figure>
-
-
-
-
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs routeros">git <span class="hljs-built_in">add</span><br><br>git commit <br><br>git pull <br><br>git push<br><br>git status<br><br>git checkout              切换分支<br><br>git branch                 创建分支<br><br>git remote <span class="hljs-built_in">add</span>          链接远程仓库<br><br>git merge                   合并分支<br></code></pre></td></tr></table></figure>
 
 <h4 id="Git使用入门，使用原理解读及如何在GitLab、GitHub或者Stash上管理项目（一）"><a href="#Git使用入门，使用原理解读及如何在GitLab、GitHub或者Stash上管理项目（一）" class="headerlink" title="Git使用入门，使用原理解读及如何在GitLab、GitHub或者Stash上管理项目（一）"></a>Git使用入门，使用原理解读及如何在GitLab、GitHub或者Stash上管理项目（一）</h4><p>   git add&#x2F; git commit &#x2F; git pull &#x2F; git push&#x2F;git status 这些命令应该是用的最多的了，具体的我就不说了。下面来针对分支branch和远程服务器remote进行一些讲解，让大家理解一下Git在项目管理上的结构，进而才能明白我们在做什么，遇到问题了该怎么分析怎么解决。</p>
 <p>   如果我们使用Git Bash进入一个目录（比如：D：&#x2F;test&#x2F;），在这个目录下执行git init命令，就会在这个目录建立一个Repository（仓库），这个仓库就是我们被Git管理的仓库了，如果你在这个目录下做什么操作，都是可以通过Git进行管理的。比如你新建了一个文件TestFile.txt，那么通过git add TestFile.txt 命令就可以把这个文件加入Git 的暂存区，再通过git commit -m “增加一个文件TestFile.txt”  命令就能够彻底将这个文件纳入Git管理了。</p>
@@ -330,45 +326,47 @@
 <p>场景1和场景2在整体上的变化大家明白以后应该就能理解merge命令的含义了吧？下面说一下另一个细节</p>
 <p>相信大家注意到，如果第一个分支的fileA.txt和第二个分支的fileA.txt进行融合的话，是有可能产生歧义的。前者的第二行希望是Hello!，后者的第二行希望是HaHa!  那么最终结果到底听谁的呢？这种情况下Git就“有可能产生冲突”。那么在merge 过程中产生冲突是怎样的效果呢？此时你的fileA.txt可能会呈现类似以下的中间状态（此时以场景1的情况为例）：</p>
 <p>HelloWorld!</p>
+</li>
+</ul>
 <blockquote>
 </blockquote>
-<p>Hello!</p>
-<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
-<p>Haha!</p>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</p>
-<p>类似这样的状态代表Git说：我糊涂了。就需要我们人工来解决这样的冲突。此时我们可以打开fileA.txt文件，发现内容可能如上所示。解决时我们会想：Hello!是我在操作testBranch1时想加的话，HaHa!是我在操作testBranch2是想加的话。两个我都想保存下来，那稍微编辑一下就想搞成如下形式：</p>
-<p>HelloWorld!</p>
-<p>Hello!</p>
-<p>HaHa!</p>
-<p>这样解决冲突（即人为编辑）完成后我们保存并关闭文件。</p>
-<p>注意！此时我们仍然处于merge的“过程中”，要想完成merge必须告诉Git：刚才冲突的文件就按照我刚才保存的这样解决！  怎么告诉Git呢？就是git add fileA.txt然后git commit -m “解决fileA文件的冲突问题” 两个命令。说白了就是再把最新的fileA.txt文件加入Git的管理。</p>
-<p>这些都做完之后，我们就已经渡过了merge过程回家包饺子了。</p>
-<p>这里需要理解一个Git的底层原理，这里称其为原理111：在将testBranch2分支merge到testBranch1分支中时，我们像上面那样解决fileA.txt文件的冲突。这样Git就“知道了”上面这个冲突的解决办法，即用形如：</p>
-<p>HelloWorld!</p>
-<p>Hello!</p>
-<p>HaHa!</p>
-<p>的内容来替换冲突文件中的内容（因为这是刚才主人决定的）。那么如果此后再将testBranch1分支merge到testBranch2分支中时，我们就不必要再手动解决冲突了，因为Git已经知道该怎么做了。</p>
-<p>这个原理会在后面的remote中得到应用，所以希望读者在此能够理解到位。</p>
-<p>好了分割线&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
-<p>下面就来讲解一下什么是Merge Request以及怎么进行合理的Merge Request</p>
-<p>举一个比较简单的场景：</p>
-<p>你们公司的服务器是Stash，上面有个正在开发的项目：ComRepository。这个项目有三个分支：master，worker1，worker2。那么如果把这个项目clone下来之后，本地也会有三个分支：master, worker1, worker2。现在心里要清楚哦，如小编第一篇文章所说，你所知道的是有6个分支的哦，服务器上3个，你本地3个。而对于公司来说，他们不在乎每个员工本地的分支是怎样，他们只在乎服务器上的master分支是否运转正常。因为服务器上的master分支有可能就是公司发表项目时用的分支，所以这个分支上的代码至关重要！</p>
-<p>此时公司要求你就在worker1分支上开发吧！那么你的开发流程是什么呢？总之最终目的是要让服务器上的master分支有你开发好的代码。</p>
-<p>为了方便，后面依然把本地分支带上后缀（L），如worker1（L）。</p>
-<p>一种思路：</p>
-<p>在worker1(L)分支上开发，然后checkout到master(L)上，将worker1(L)分支merge到master(L)上来，然后将master(L)的新代码push到服务器的master上去。</p>
-<p>这种思路是不该推荐的，如果我是老大，我是不会给你分配master分支的push权限的。因为这样太危险了，master分支是公司至关重要的分支，岂能让你说push就push？这样会让公司的master上的代码时刻处于危险之中。</p>
-<p>第二种思路：</p>
-<p>就是Merge Request的思路。我们每个开发人员都没有master分支的push权限，但是有pull权限。即只能看，不能写。但是我们有其它分支（如worker1和worker2）的pull和push权限，反正这两个分支也不是太重要的分支，开发者爱怎么糟蹋怎么糟蹋。</p>
-<p>那么怎么才能让服务器上的master分支得到更新呢？就是在服务器上进行merge动作，即将服务器上的worker1或者worker2分支上的内容merge到master分支上。这个过程就是Merge Request！所以服务器上的merge动作不是靠你本地git merge命令来完成的，因为你只能操作你本地的分支，服务器上的分支你八竿子打不着，怎么可能轻易去“命令它”？所以这个merge动作基本上是在你们服务器的网页上进行的。比如：你在公司服务器的网站上，发起一个Merge Request，请求把服务器上的worker1分支merge到master分支上去，请求发起要添加一些审核人物，譬如你的老板你的同事。当他们接收到这个Merge Request并同意后，可能会有个“同意”之类的按钮，点击之后就会在服务器上把worker1分支merge到master中。这样做就有效地保护了master分支的安全性。</p>
-<p>服务器上的worker1分支的更新就是靠你在本地worker1(L)上更新后push上去的。所以简单的流程就是你早上来上班了，在worker1(L)分支上开发了一天，然后把工作内容都push到服务器的worker1分支上去，再发起一个Merge Request请求把服务器上的worker1分支merge到master上去，然后下班。</p>
-<p>分割线&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
-<p>以上就是结合remote和branch来讲解的Merge Request。读者了解之后，可以学习一下下面的非常重要的内容：</p>
-<p>试想一下：如果你请求worker1往master上merge，我请求worker2也往master上merge。那么久而久之，我们有可能都改了同一个文件，就可能会产生冲突。那样的话master分支上岂不是乱七八糟了？那么怎么才能让master上的分支一直正确，不产生冲突呢？</p>
-<p>下面我先说下流程：比如你是在worker1(L)分支上的开发者，做完了一天的工作，先不要提Merge Request，而是先checkout到master(L)上，pull一下，把服务器上master的代码拉下来，是本地的master(L)是最新的master代码，然后checkout回worker1(L)分支，将master(L)分支merge到worker1(L)上，这时候就有可能发生冲突了，因为可能在你下班之前，worker2分支的同事已经提交了代码并且更新了master，而你们恰巧修改了同一个文件。这时候冲突了不要紧，因为冲突是发生在你本地的，你只要在本地把冲突解决了，然后push到worker1分支上去，再提Merge Request，就不会使服务器上的master产生代码冲突了。</p>
-<p>原因相信聪明的你已经明白，就是上面提到的原理111 。因为你在本地解决冲突的时候，Git就已经知道产生冲突以后该怎么做了，而你又把这些脚本push到了服务器的worker1分支上，那么服务器的worker1分支在往master分支合并的时候自然就知道该怎么做了。怎么样，Git强大吧？</p>
-<p>顺便再建议一下，当你早上来上班时，尽量也checkout到master(L)，pull一下，再checkout回worker1(L)，把master(L)分支的内容merge过来，完成之后再进行开发。这样就是尽量保持在昨晚之后的最新的代码上进行开发，以减少产生冲突的可能性嘛~</p>
-</li>
+<p>  Hello!</p>
+<p>  &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p>  Haha!</p>
+<p>  &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</p>
+<p>  类似这样的状态代表Git说：我糊涂了。就需要我们人工来解决这样的冲突。此时我们可以打开fileA.txt文件，发现内容可能如上所示。解决时我们会想：Hello!是我在操作testBranch1时想加的话，HaHa!是我在操作testBranch2是想加的话。两个我都想保存下来，那稍微编辑一下就想搞成如下形式：</p>
+<p>  HelloWorld!</p>
+<p>  Hello!</p>
+<p>  HaHa!</p>
+<p>  这样解决冲突（即人为编辑）完成后我们保存并关闭文件。</p>
+<p>  注意！此时我们仍然处于merge的“过程中”，要想完成merge必须告诉Git：刚才冲突的文件就按照我刚才保存的这样解决！  怎么告诉Git呢？就是git add fileA.txt然后git commit -m “解决fileA文件的冲突问题” 两个命令。说白了就是再把最新的fileA.txt文件加入Git的管理。</p>
+<p>  这些都做完之后，我们就已经渡过了merge过程回家包饺子了。</p>
+<p>  这里需要理解一个Git的底层原理，这里称其为原理111：在将testBranch2分支merge到testBranch1分支中时，我们像上面那样解决fileA.txt文件的冲突。这样Git就“知道了”上面这个冲突的解决办法，即用形如：</p>
+<p>  HelloWorld!</p>
+<p>  Hello!</p>
+<p>  HaHa!</p>
+<p>  的内容来替换冲突文件中的内容（因为这是刚才主人决定的）。那么如果此后再将testBranch1分支merge到testBranch2分支中时，我们就不必要再手动解决冲突了，因为Git已经知道该怎么做了。</p>
+<p>  这个原理会在后面的remote中得到应用，所以希望读者在此能够理解到位。</p>
+<p>  好了分割线&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p>  下面就来讲解一下什么是Merge Request以及怎么进行合理的Merge Request</p>
+<p>  举一个比较简单的场景：</p>
+<p>  你们公司的服务器是Stash，上面有个正在开发的项目：ComRepository。这个项目有三个分支：master，worker1，worker2。那么如果把这个项目clone下来之后，本地也会有三个分支：master, worker1, worker2。现在心里要清楚哦，如小编第一篇文章所说，你所知道的是有6个分支的哦，服务器上3个，你本地3个。而对于公司来说，他们不在乎每个员工本地的分支是怎样，他们只在乎服务器上的master分支是否运转正常。因为服务器上的master分支有可能就是公司发表项目时用的分支，所以这个分支上的代码至关重要！</p>
+<p>  此时公司要求你就在worker1分支上开发吧！那么你的开发流程是什么呢？总之最终目的是要让服务器上的master分支有你开发好的代码。</p>
+<p>  为了方便，后面依然把本地分支带上后缀（L），如worker1（L）。</p>
+<p>  一种思路：</p>
+<p>  在worker1(L)分支上开发，然后checkout到master(L)上，将worker1(L)分支merge到master(L)上来，然后将master(L)的新代码push到服务器的master上去。</p>
+<p>  这种思路是不该推荐的，如果我是老大，我是不会给你分配master分支的push权限的。因为这样太危险了，master分支是公司至关重要的分支，岂能让你说push就push？这样会让公司的master上的代码时刻处于危险之中。</p>
+<p>  第二种思路：</p>
+<p>  就是Merge Request的思路。我们每个开发人员都没有master分支的push权限，但是有pull权限。即只能看，不能写。但是我们有其它分支（如worker1和worker2）的pull和push权限，反正这两个分支也不是太重要的分支，开发者爱怎么糟蹋怎么糟蹋。</p>
+<p>  那么怎么才能让服务器上的master分支得到更新呢？就是在服务器上进行merge动作，即将服务器上的worker1或者worker2分支上的内容merge到master分支上。这个过程就是Merge Request！所以服务器上的merge动作不是靠你本地git merge命令来完成的，因为你只能操作你本地的分支，服务器上的分支你八竿子打不着，怎么可能轻易去“命令它”？所以这个merge动作基本上是在你们服务器的网页上进行的。比如：你在公司服务器的网站上，发起一个Merge Request，请求把服务器上的worker1分支merge到master分支上去，请求发起要添加一些审核人物，譬如你的老板你的同事。当他们接收到这个Merge Request并同意后，可能会有个“同意”之类的按钮，点击之后就会在服务器上把worker1分支merge到master中。这样做就有效地保护了master分支的安全性。</p>
+<p>  服务器上的worker1分支的更新就是靠你在本地worker1(L)上更新后push上去的。所以简单的流程就是你早上来上班了，在worker1(L)分支上开发了一天，然后把工作内容都push到服务器的worker1分支上去，再发起一个Merge Request请求把服务器上的worker1分支merge到master上去，然后下班。</p>
+<p>  分割线&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p>  以上就是结合remote和branch来讲解的Merge Request。读者了解之后，可以学习一下下面的非常重要的内容：</p>
+<p>  试想一下：如果你请求worker1往master上merge，我请求worker2也往master上merge。那么久而久之，我们有可能都改了同一个文件，就可能会产生冲突。那样的话master分支上岂不是乱七八糟了？那么怎么才能让master上的分支一直正确，不产生冲突呢？</p>
+<p>  下面我先说下流程：比如你是在worker1(L)分支上的开发者，做完了一天的工作，先不要提Merge Request，而是先checkout到master(L)上，pull一下，把服务器上master的代码拉下来，是本地的master(L)是最新的master代码，然后checkout回worker1(L)分支，将master(L)分支merge到worker1(L)上，这时候就有可能发生冲突了，因为可能在你下班之前，worker2分支的同事已经提交了代码并且更新了master，而你们恰巧修改了同一个文件。这时候冲突了不要紧，因为冲突是发生在你本地的，你只要在本地把冲突解决了，然后push到worker1分支上去，再提Merge Request，就不会使服务器上的master产生代码冲突了。</p>
+<p>  原因相信聪明的你已经明白，就是上面提到的原理111 。因为你在本地解决冲突的时候，Git就已经知道产生冲突以后该怎么做了，而你又把这些脚本push到了服务器的worker1分支上，那么服务器的worker1分支在往master分支合并的时候自然就知道该怎么做了。怎么样，Git强大吧？</p>
+<p>  顺便再建议一下，当你早上来上班时，尽量也checkout到master(L)，pull一下，再checkout回worker1(L)，把master(L)分支的内容merge过来，完成之后再进行开发。这样就是尽量保持在昨晚之后的最新的代码上进行开发，以减少产生冲突的可能性嘛~</p>
+<ul>
 <li><h4 id="Git原理杂谈之pull-x2F-push命令"><a href="#Git原理杂谈之pull-x2F-push命令" class="headerlink" title="Git原理杂谈之pull&#x2F;push命令"></a>Git原理杂谈之pull&#x2F;push命令</h4><p>好了废话不多说了，直接进入今天的主题——git push&#x2F; git pull命令。</p>
 <p>也许很多人会轻视这两个最常见且高频使用的命令，这有什么可讲的？没错，如果项目没有出问题的情况下，我们大可不必关心这两个命令的原理及涉及到的所有细节，直接使它们喽~但是一旦项目出了什么小问题，使项目管理稍微脱离了“正常”流程，如果不了解这两个命令的话，大部分都容易傻眼。</p>
 <p>续之前几篇的风格，小编先从偏表层讲清楚一些原理，等消化后再进一步讲解内部的细节原理。（PS：了解了各层次的原理后才能遇到问题都能理智地分析并解决掉问题）</p>
@@ -400,8 +398,7 @@
 <p>好了，关于git push&#x2F;git pull背后的分支的概念现在已经说的差不多了。这是以后讲解其它原理的基础，所以一定要放在前面说下，以后的文章里会更深入地讲解一些关键的原理，以帮助大家更加灵活地运用Git及解决问题。</p>
 </li>
 </ul>
-<p>git
-  </p>
+<p>git</p>
 
                 
               </div>
