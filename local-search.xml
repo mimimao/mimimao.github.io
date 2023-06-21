@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>使用rembg抠图</title>
+    <link href="/2023/06/21/%E4%BD%BF%E7%94%A8rembg%E6%8A%A0%E5%9B%BE/"/>
+    <url>/2023/06/21/%E4%BD%BF%E7%94%A8rembg%E6%8A%A0%E5%9B%BE/</url>
+    
+    <content type="html"><![CDATA[<h1 id="如何使用rembg抠图"><a href="#如何使用rembg抠图" class="headerlink" title="如何使用rembg抠图"></a>如何使用rembg抠图</h1><h3 id="下面介绍安装方法："><a href="#下面介绍安装方法：" class="headerlink" title="下面介绍安装方法："></a>下面介绍安装方法：</h3><p>系统测试环境：</p><ol><li><p>Win10</p></li><li><p>Anaconda3（Python3.9）</p></li></ol><p>rembg要求Python3.8或以上，如果用Win7 环境，Python版本不能超过3.8.3（好像是）。</p><ol><li>Anaconda 新建 rembg2环境,并激活该环境</li></ol><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">conda</span> create -n rembg2 python=<span class="hljs-number">3</span>.<span class="hljs-number">9</span><br><span class="hljs-attribute">conda</span> activate rembg2<br></code></pre></td></tr></table></figure><ol start="2"><li>安装rembg，我现在安装的是rembg-2.0.21版本，该命令会下载很多依赖。</li></ol><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><br>pip <span class="hljs-keyword">install</span> rembg<br></code></pre></td></tr></table></figure><ol start="3"><li>拷贝u2net.onnx到C:\users\用户名.u2net目录上,该文件的正规下载路径：</li></ol><p>百度云下载链接：<a href="https://pan.baidu.com/s/13slteJLATzf1LDmIkcqgRw?pwd=wa78">https://pan.baidu.com/s/13slteJLATzf1LDmIkcqgRw?pwd=wa78</a></p><p> （感谢B站up主的共享）</p><ol start="4"><li>测试</li></ol><p>–单文件测试</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs stylus">rembg <span class="hljs-selector-tag">i</span> path/to/<span class="hljs-selector-tag">input</span><span class="hljs-selector-class">.png</span> path/to/output<span class="hljs-selector-class">.png</span><br><br><br>例如<br>rembg <span class="hljs-selector-tag">i</span> <span class="hljs-number">1</span><span class="hljs-selector-class">.jpg</span> <span class="hljs-number">2</span>.jpg<br></code></pre></td></tr></table></figure><p> –文件夹测试</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css">rembg <span class="hljs-selector-tag">p</span> path/<span class="hljs-selector-tag">to</span>/<span class="hljs-selector-tag">input</span> path/<span class="hljs-selector-tag">to</span>/output<br>例如<br>rembg <span class="hljs-selector-tag">p</span> .\image .\image2<br></code></pre></td></tr></table></figure><p>help：</p><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs basic"><span class="hljs-comment">rembg --help</span><br></code></pre></td></tr></table></figure><p> 测试时提示报错，安装Visual Studio后正常。</p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">ImportError</span>: Microsoft Visual C++ Redistributable for Visual Studio <span class="hljs-number">2019</span> not installed <span class="hljs-literal">on</span> the machine.<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>AI</category>
+      
+      <category>抠图</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>抠图</tag>
+      
+      <tag>rembg</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Anaconda入门基本命令</title>
     <link href="/2023/06/08/Anaconda%E5%85%A5%E9%97%A8%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/"/>
     <url>/2023/06/08/Anaconda%E5%85%A5%E9%97%A8%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</url>
